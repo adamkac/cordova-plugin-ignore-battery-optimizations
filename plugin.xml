@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+        id="cordova-plugin-ignore-battery-optimizations"
+        version="1.0.0">
+    <name>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</name>
+    <description>Plugin for disabling battery optimizations</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,battery</keywords>
+
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+        </config-file>
+
+    </platform>
+</plugin>
