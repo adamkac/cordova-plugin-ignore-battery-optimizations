@@ -7,6 +7,10 @@
 	<license>Apache 2.0</license>
 	<keywords>cordova,REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,battery</keywords>
 
+    <js-module src="www/BatteryOptimizations.js" name="device">
+        <clobbers target="window.BatteryOptimizations" />
+    </js-module>
+
 
 	<!-- android -->
 	<platform name="android">
