@@ -28,6 +28,7 @@ public class BatteryOptimizations extends CordovaPlugin {
 
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     if (action.equals("run")) {
+    	Context context = cordova.getActivity().getApplicationContext();
 			Intent intent = new Intent();
 			String packageName = context.getPackageName();
 			PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
