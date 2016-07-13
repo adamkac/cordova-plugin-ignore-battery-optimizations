@@ -14,6 +14,13 @@
 
 	<!-- android -->
 	<platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BatteryOptimizations">
+                <param name="android-package" value="org.apache.cordova.batteryoptimizations.BatteryOptimizations"/>
+            </feature>
+        </config-file>
+
 		<config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 		</config-file>
