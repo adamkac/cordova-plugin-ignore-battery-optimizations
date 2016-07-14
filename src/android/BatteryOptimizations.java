@@ -30,6 +30,7 @@ public class BatteryOptimizations extends CordovaPlugin {
     if (action.equals("run")) {
     	Context context = cordova.getActivity().getApplicationContext();
 			Intent intent = new Intent();
+			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			String packageName = context.getPackageName();
 			PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
 			if (pm.isIgnoringBatteryOptimizations(packageName))
